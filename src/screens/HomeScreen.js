@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet } from "react-native"; //These are Primitive React Elements
 
 const HomeScreen = () => {
   return <Text style={styles.text}>Hi there!</Text>;
