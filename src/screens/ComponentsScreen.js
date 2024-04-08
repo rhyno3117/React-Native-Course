@@ -3,12 +3,14 @@ import { Text, StyleSheet, View } from 'react-native'; //These are Primitive Rea
 
 const ComponentsScreen = () => {
     const greeting = 'Hi there!';
+    const greeting2 = <Text>Another way to show Hi there!</Text>
 
 
     return (
         <View>
             <Text style={styles.textStyle}>This is the components screen</Text>
             <Text>{greeting}</Text>
+            {greeting2}
         </View>
     )
 };
