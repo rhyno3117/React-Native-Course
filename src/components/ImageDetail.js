@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 const ImageDetail = () => {
-    return <Text>Image Detail</Text>
+    return <Text>Show image of forest</Text>
 };
 
 const styles = StyleSheet.create({});
