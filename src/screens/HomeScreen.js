@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet, View, Button } from "react-native"; //These are Primitive React Elements
+import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native"; //These are Primitive React Elements
 
 const HomeScreen = () => {
   return (
@@ -9,6 +9,9 @@ const HomeScreen = () => {
         title="Go to Components Demo"
         onPress={() => console.log('Button Pressed')}
       />
+      <TouchableOpacity onPress={() => console.log('List Pressed')}>
+        <Text>Go to List Demo</Text>
+      </TouchableOpacity>
     </View>
   );
 };
