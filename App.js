@@ -12,7 +12,7 @@ const navigator = createStackNavigator(
     Components: ComponentsScreen,
     List: ListScreen,
     Image: ImageScreen,
-    CounterScreen: CounterScreen
+    Counter: CounterScreen
   },
   {
     initialRouteName: "Home",
