@@ -17,9 +17,13 @@ const SquareScreen = () => {
                 color="Red"
             />
             <ColorCounter
+            onIncrease={() => setBlue(blue + 1)}
+            onDecrease={() => setBlue(blue - 1)}
                 color="Blue"
             />
             <ColorCounter
+            onIncrease={() => setGreen(green + 1)}
+            onDecrease={() => setGreen(green - 1)}
                 color="Green"
             />
         </View>
