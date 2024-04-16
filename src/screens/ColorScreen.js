@@ -6,7 +6,7 @@ const ColorScreen = () => {
     console.log(colors)
 
     return (
-        <View>
+        <View style={styles.container}>
             <Button
                 title="Add a Color"
                 onPress={() => {
@@ -34,6 +34,10 @@ const randomRgb = () => {
     return `rgb(${red}, ${green}, ${blue})`;
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    container: {
+        alignItems: 'center',
+    }
+});
 
 export default ColorScreen;
