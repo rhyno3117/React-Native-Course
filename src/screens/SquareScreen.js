@@ -7,10 +7,9 @@ const COLOR_INCREMENT = 15;
 const reducer = (state, action) => {
     //state === {red: number, green: number, blue: number};
     //action === {colorToChange: 'red' || 'green' || 'blue', amount: 15 || -15};
-
     switch (action.colorToChange) {
         case 'red':
-            return { ...state, red: state.red + action.amount }
+            return state.red + action.amount > 255 || state.red + action.amount < 0 ? state : { ...state, red: state.red + action.amount }
         case 'green':
             return { ...state, green: state.green + action.amount }
         case 'blue':
@@ -23,7 +22,6 @@ const reducer = (state, action) => {
 const SquareScreen = () => {
     const [state, dispatch] = useReducer(reducer, { red: 0, green: 0, blue: 0 });
     const { red, green, blue } = state;
-
     return (
         <View>
             <ColorCounter
