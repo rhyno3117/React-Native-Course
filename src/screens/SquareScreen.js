@@ -15,38 +15,34 @@ const SquareScreen = () => {
 
         switch (color) {
             case 'red':
-                    if (red + change > 255 || red + change < 0) {
-                        return;
-                    } else {
-                        setRed(red + change);
-                    }
-                    return;
-                }
-        };
-
-        return (
-            <View>
-                <ColorCounter
-                    onIncrease={() => setColor('red', COLOR_INCREMENT)}
-                    onDecrease={() => setColor('red', -1 * COLOR_INCREMENT)}
-                    color="Red"
-                />
-                <ColorCounter
-                    onIncrease={() => setBlue(blue + COLOR_INCREMENT)}
-                    onDecrease={() => setBlue(blue - COLOR_INCREMENT)}
-                    color="Blue"
-                />
-                <ColorCounter
-                    onIncrease={() => setGreen(green + COLOR_INCREMENT)}
-                    onDecrease={() => setGreen(green - COLOR_INCREMENT)}
-                    color="Green"
-                />
-                <View style={{ height: 150, width: 150, backgroundColor: `rgb(${red}, ${green}, ${blue})` }} />
-            </View>
-        )
-
+                red + change > 255 || red + change < 0 ? null : setRed(red + change);
+                return;
+        }
     };
 
-    const styles = StyleSheet.create({});
+    return (
+        <View>
+            <ColorCounter
+                onIncrease={() => setColor('red', COLOR_INCREMENT)}
+                onDecrease={() => setColor('red', -1 * COLOR_INCREMENT)}
+                color="Red"
+            />
+            <ColorCounter
+                onIncrease={() => setBlue(blue + COLOR_INCREMENT)}
+                onDecrease={() => setBlue(blue - COLOR_INCREMENT)}
+                color="Blue"
+            />
+            <ColorCounter
+                onIncrease={() => setGreen(green + COLOR_INCREMENT)}
+                onDecrease={() => setGreen(green - COLOR_INCREMENT)}
+                color="Green"
+            />
+            <View style={{ height: 150, width: 150, backgroundColor: `rgb(${red}, ${green}, ${blue})` }} />
+        </View>
+    )
 
-    export default SquareScreen;
+};
+
+const styles = StyleSheet.create({});
+
+export default SquareScreen;
