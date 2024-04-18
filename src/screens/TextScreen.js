@@ -7,6 +7,7 @@ const TextScreen = () => {
         <View>
             <TextInput
                 autoCapitalize='none'
+                autoCorrect={false}
                 style={styles.input}
             />
         </View>
