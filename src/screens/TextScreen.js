@@ -5,7 +5,10 @@ import React from 'react'
 const TextScreen = () => {
     return (
         <View>
-            <TextInput style={styles.input}/>
+            <TextInput
+                autoCapitalize='none'
+                style={styles.input}
+            />
         </View>
     );
 };
