@@ -6,9 +6,9 @@ const TextScreen = () => {
     <View>
       <Text>TextScreen</Text>
     </View>
-  )
-}
+  );
+};
 
-const styles = StylesSheet.create({})
+const styles = StyleSheet.create({});
 
-export default TextScreen
+export default TextScreen;
